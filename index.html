@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+
+        <title> Sample Table</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <!--[if lte IE 8]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<!--the above code fixes IE problems with styling semantic tags-->
+       
+        
+    </head>
+    <body>
+
+        <div id="calculatorWrapper">
+            
+                <header>
+                    <img src="img/calcIcon.png" alt="Calculator Icon" width="12" height="16"><!-- comment for clearing the space between icon and heading when separated
+                    --><h1>Calculator</h1>
+                    <div id="windowControls">
+                        <input type="button" class="min" value=" ">
+                        <input type="button" class="max" value=" " disabled="disabled">
+                        <input type="button" class="close" value=" ">
+                    </div>
+                </header>
+            <div id="calculator">
+                <!-- CALCULATOR MENU STARTING HERE -->
+                <nav>
+                    <ul>
+                        <li>View
+                            <div id="menuItem1">
+                                    <ul>
+                                        <li>Standard <span>Alt+1</span></li> 
+                                        <li>Scientific <span>Alt+2</span></li>
+                                        <li class="selectedNavItem">Programmer <span>Alt+3</span></li>
+                                        <li>Statistics <span>Alt+4</span></li>
+                                    
+                                        <li>History <span>Ctrl+H</span></li>
+                                        <li>Digit grouping</li>
+                                    
+                                        <li class="selectedNavItem">Basic <span>Ctrl+F4</span></li>
+                                        <li>Unit conversion <span>Ctrl+U</span></li>
+                                        <li>Date calculation <span>Ctrl+E</span></li>
+                                        <li>Worksheets <span>&#x25B6;</span>
+                                        
+                                            <div id="submenuItem1">
+                                                <ul>
+                                                    <li>Mortgage</li>
+                                                    <li>Vehicle lease</li>
+                                                    <li>Fuel economy (mpg)</li>
+                                                    <li>Fuel economy (L/100 km)</li>
+                                                </ul>
+                                            </div>
+                                        
+                                        </li>
+                                    </ul>
+                            </div>
+                        
+                        </li>
+                        <li>Edit
+                        
+                            <div id="menuItem2">
+                                <ul>
+                                    <li>Copy <span>Ctrl+C</span></li>
+                                    <li>Paste <span>Ctrl+V</span></li>
+                                </ul>
+                            </div>
+                        
+                        </li>
+                        <li>Help
+                            <div id="menuItem3">
+                                <ul>
+                                    <li>View Help <span>F1</span></li>
+                                    <li>About Calculator</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            <!--  END OF MENU  -->
+            <!--  RESULT FIELD BEGINS HERE  -->
+                
+            <input type="text" name="result" value="0" disabled="disabled">
+            
+            <table id="bits">
+                <tr>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                </tr>
+                <tr>
+                    <td>63</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>47</td>
+                    <td></td>
+                    <td></td>
+                    <td>32</td>
+                </tr>
+                <tr>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                    <td>0000</td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>15</td>
+                    <td></td>
+                    <td></td>
+                    <td>0</td>
+                </tr>
+            </table>
+            
+            <table id="options">
+                <tr>
+                    <td>
+                        <div><input type="radio" id="hexChk" name="numSystem" value="hex"><label for="hexChk">Hex</label></div>
+                        <div><input type="radio" id="decChk" name="numSystem" value="dec" checked="checked"><label for="decChk">Dec</label></div>
+                        <div><input type="radio" id="octChk" name="numSystem" value="oct"><label for="octChk">Oct</label></div>
+                        <div><input type="radio" id="binChk" name="numSystem" value="bin"><label for="binChk">Bin</label></div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div><input type="radio" id="qwordChk" name="length" value="qword"><label for="qwordChk">Qword</label></div>
+                        <div><input type="radio" id="dwordChk" name="length" value="dword" checked="checked"><label for="dwordChk">Dword</label></div>
+                        <div><input type="radio" id="wordChk" name="length" value="word"><label for="wordChk">Word</label></div>
+                        <div><input type="radio" id="byteChk" name="length" value="byte"><label for="byteChk">Byte</label></div>
+                    </td>
+                </tr>
+            </table>
+            
+            <table id="buttons">
+                <tr>
+                    <td><button type="button" class="group2" value=""></button></td>
+                    <td><button type="button" class="group1" value="Mod">Mod<span>Mod</span></button></td>
+                    <td><button type="button" class="group2" value="A">A<span>A</span></button></td>
+                    <td><button type="button" class="group3" value="MC">MC<span>MC</span></button></td>
+                    <td><button type="button" class="group3" value="MR">MR<span>MR</span></button></td>
+                    <td><button type="button" class="group3" value="MS">MS<span>MS</span></button></td>
+                    <td><button type="button" class="group3" value="M+">M+<span>M+</span></button></td>
+                    <td><button type="button" class="group3" value="M-">M-<span>M-</span></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="group1" value="(">(<span>(</span></button></td>
+                    <td><button type="button" class="group1" value=")">)<span>)</span></button></td>
+                    <td><button type="button" class="group2" value="B">B<span>B</span></button></td>
+                    <td><button type="button" class="group1" value="&larr;">&larr;<span>&larr;</span></button></td>
+                    <td><button type="button" class="group1" value="CE">CE<span>CE</span></button></td>
+                    <td><button type="button" class="group1" value="C">C<span>C</span></button></td>
+                    <td><button type="button" class="group1" value="&#177;">&#177;<span>&#177;</span></button></td>
+                    <td><button type="button" class="group2" value="&#8730;">&#8730;<span>&#8730;</span></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="group1" value="RoL">RoL<span>RoL</span></button></td>
+                    <td><button type="button" class="group1" value="RoR">RoR<span>RoR</span></button></td>
+                    <td><button type="button" class="group2" value="C">C<span>C</span></button></td>
+                    <td><button type="button" class="group4" value="7">7<span>7</span></button></td>
+                    <td><button type="button" class="group4" value="8">8<span>8</span></button></td>
+                    <td><button type="button" class="group4" value="9">9<span>9</span></button></td>
+                    <td><button type="button" class="group1" value="/">/<span>/</span></button></td>
+                    <td><button type="button" class="group2" value="%">%<span>%</span></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="group1" value="Or">Or<span>Or</span></button></td>
+                    <td><button type="button" class="group1" value="Xor">Xor<span>Xor</span></button></td>
+                    <td><button type="button" class="group2" value="D">D<span>D</span></button></td>
+                    <td><button type="button" class="group4" value="4">4<span>4</span></button></td>
+                    <td><button type="button" class="group4" value="5">5<span>5</span></button></td>
+                    <td><button type="button" class="group4" value="6">6<span>6</span></button></td>
+                    <td><button type="button" class="group1" value="*">*<span>*</span></button></td>
+                    <td><button type="button" class="group2" value="1/x">1/&#x2717;<span>1/&#x2717;</span></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="group1" value="Lsh">Lsh<span>Lsh</span></button></td>
+                    <td><button type="button" class="group1" value="Rsh">Rsh<span>Rsh</span></button></td>
+                    <td><button type="button" class="group2" value="E">E<span>E</span></button></td>
+                    <td><button type="button" class="group4" value="1">1<span>1</span></button></td>
+                    <td><button type="button" class="group4" value="2">2<span>2</span></button></td>
+                    <td><button type="button" class="group4" value="3">3<span>3</span></button></td>
+                    <td><button type="button" class="group1" value="-">-<span>-</span></button></td>
+                    <td rowspan="2"><button type="button" class="equal" value="=">=<span>=</span></button></td>
+                </tr>
+                <tr>
+                    <td><button type="button" class="group1" value="Not">Not<span>Not</span></button></td>
+                    <td><button type="button" class="group1" value="And">And<span>And</span></button></td>
+                    <td><button type="button" class="group2" value="F">F<span>F</span></button></td>
+                    <td colspan="2"><button type="button" id="zero" value="0">0<span>0</span></button></td>
+                    <td><button type="button" class="group2" value=".">.<span>.</span></button></td>
+                    <td><button type="button" class="group1" value="+">+<span>+</span></button></td>
+                    
+                </tr>
+            </table>
+           
+            </div>
+        </div>
+        
+        
+         <script src="modernizr.js" ></script>f
+    </body>   
+</html>
